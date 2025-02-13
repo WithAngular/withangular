@@ -15,8 +15,8 @@ body {
     density: 0,
   ));
 
-  background-color: #333;
-  color: #f4f4f4;
+  background-color: #242424;
+  color: #d8d8d8;
 }
 
 html {
@@ -24,13 +24,13 @@ html {
 }
 
 mat-toolbar {
-  background-color: #292929 !important;
+  background-color: #1e1a1d !important;
   box-shadow: 0 0.1rem 0.3rem 0 #00000065;
 }
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: #d8d8d8;
 }
 
 .gradient-text {
@@ -45,9 +45,19 @@ a {
   font-weight: 500;
 }
 
+.gradient-bgr {
+  background: linear-gradient(45deg, #ff1521bd, #ff2ca4c7, #d230dec6, #9b17fab6) !important;
+  color: #333 !important;
+}
+
+mat-card {
+  color: #d8d8d8 !important;
+  box-shadow: 0 0.1rem 0.3rem 0 #00000074 !important;
+}
+
 app-footer {
-  background-color: #292929;
-  color: #f4f4f4;
+  background-color: #1e1a1d;
+  color: #d8d8d8 !important;
   box-shadow: 0 -0.1rem 0.3rem 0 #00000065;
 }
 
@@ -64,13 +74,23 @@ app-footer {
     ));
 
     background-color: #e8e8e8;
-    color: #333;
+    color: #333 !important;
   }
 
   mat-toolbar {
     background-color: #d9d9d9 !important;
     color: #333;
     box-shadow: 0 0.1rem 0.3rem 0 #00000036;
+  }
+
+  *[mat-mini-fab] {
+    background-color: #d9d9d9 !important;
+    color: #333;
+  }
+
+  mat-card {
+    background-color: #dedede !important;
+    color: #333 !important;
   }
 
   app-footer {
