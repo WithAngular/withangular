@@ -55,7 +55,7 @@ import { MatIconModule } from "@angular/material/icon";
 })
 export class CarouselComponent {
 	cards = ["Card 1", "Card 2", "Card 3", "Card 4", "Card 5"];
-	activeIndex = signal(2); // Start with Card 3 in the center
+	activeIndex = signal(0); // Start with Card 3 in the center
 
 	next() {
 		this.activeIndex.set((this.activeIndex() + 1) % this.cards.length);
@@ -66,4 +66,8 @@ export class CarouselComponent {
 			(this.activeIndex() - 1 + this.cards.length) % this.cards.length
 		);
 	}
+
+  goToCard(index: number) {
+    this.activeIndex.set(index);
+  }
 }

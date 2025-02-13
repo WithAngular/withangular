@@ -4,4 +4,17 @@
   justify-content: space-between;
   height: 100dvh;
   width: 100dvw;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/branding/withangular_dev_cover.jpg') no-repeat center center/cover;
+    filter: blur(5px);
+    opacity: 0.1;
+    z-index: -1;
+  }
 }

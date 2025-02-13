@@ -13,6 +13,7 @@ All types of contributions are encouraged and valued. Please make sure to read t
 - [Standardization Across App Versions](#standardization-across-app-versions)
 - [Before you start working on an Issue](#before-you-start-working-on-an-issue)
 - [Submitting a Pull Request (PR)](#submitting-a-pull-request-pr)
+- [PR Scope](#pr-scope)
 - [Reviewing a Pull Request](#reviewing-a-pull-request)
 - [Coding Rules](#coding-rules)
 - [Commit Message Guidelines](#commit-message-guidelines)
@@ -114,9 +115,32 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 
 10. In GitHub, send a pull request to `withangular:main`.
 
-**DO NOT** erase the provided PR template! It is intended for you to use, not to replace it with random text.
+### Important: Using Closing Tags in PRs 
+
+To improve issue tracking and automate maintenance, always use GitHub’s **closing keywords** when your PR resolves an issue. That is why the following prase is already included in the template:
+- `Closes #`
+
+GitHub uses it to automatically close the referenced issue when the PR is merged. This ensures that issues are properly managed and prevents duplication of work.
+
+### Do Not Erase the PR Template
+The PR template is provided to streamline contributions. Please fill it out properly rather than replacing it with random text.
 
 It is always a good practice to look up already merged PRs and ensure your new PR matches the established format. This helps maintain consistency and makes it easier for others to understand and collaborate.
+
+## PR Scope
+### New Contributors:
+ - **Work on one issue per PR**. This keeps the review process straightforward and reduces potential conflicts.
+  As you gain familiarity with the project, you may work on multiple related issues in a single PR.
+
+### Returning Contributors :
+- A you continue to contribute you may slowly gradually increase the amount issues within a single PR, but all issues must be properly documented and all of them must be tagged with `Closes #<issue_number>` in the PR description.
+- Ensure that each issue addressed in your PR is documented clearly.
+
+### Core Team Members:
+- Core team members can work on as many issues as needed within a single PR.
+- They may **also introduce small, non-breaking fixes or enhancements** that they discover while developing.
+- Not all of these changes need to be tied to a specific issue, **as long as they are documented clearly in the PR description**.
+- This flexibility allows for continuous improvements while maintaining project stability and traceability.
 
 ## Reviewing a Pull Request
 
