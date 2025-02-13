@@ -1,4 +1,82 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  height: 100%;
+
+  @include mat.theme((
+    color: (
+      theme-type: dark,
+      primary: mat.$magenta-palette,
+      tertiary: mat.$violet-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+
+  background-color: #333;
+  color: #f4f4f4;
+}
+
+html {
+  height: 100%;
+}
+
+mat-toolbar {
+  background-color: #292929 !important;
+  box-shadow: 0 0.1rem 0.3rem 0 #00000065;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #ff1520, #ff2ca4, #d330de, #9b17fa);
+  -webkit-background-clip: text;
+  /* For Safari and Chrome */
+  -webkit-text-fill-color: transparent;
+  /* For Safari and Chrome */
+  background-clip: text;
+  /* For Firefox */
+  color: transparent;
+  font-weight: 500;
+}
+
+app-footer {
+  background-color: #292929;
+  color: #f4f4f4;
+  box-shadow: 0 -0.1rem 0.3rem 0 #00000065;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    @include mat.theme((
+      color: (
+        theme-type: light,
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    ));
+
+    background-color: #e8e8e8;
+    color: #333;
+  }
+
+  mat-toolbar {
+    background-color: #d9d9d9 !important;
+    color: #333;
+    box-shadow: 0 0.1rem 0.3rem 0 #00000036;
+  }
+
+  app-footer {
+    background-color: #d9d9d9;
+    color: #333;
+    box-shadow: 0 -0.1rem 0.3rem 0 #00000036;
+  }
+}
+

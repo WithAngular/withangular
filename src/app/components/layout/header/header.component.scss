@@ -1,0 +1,14 @@
+mat-toolbar {
+  justify-content: space-between;
+
+  .toolbar-start {
+    flex-grow: 1;
+    margin-left: 2.5rem;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
