@@ -46,8 +46,17 @@ a {
 }
 
 .gradient-bgr {
-  background: linear-gradient(45deg, #ff1521bd, #ff2ca4c7, #d230dec6, #9b17fab6) !important;
-  color: #333 !important;
+  background: linear-gradient(45deg, #ff1521a3, #ff2ca4a1, #d230dea0, #9b17faa1) !important;
+  color: inherit;
+}
+
+.gradient-bgr-subtle {
+  background: linear-gradient(45deg, #ff15212b, #ff2ca429, #d230de2b, #9b17fa29) !important;
+  color: inherit;
+
+  &.active {
+    background: linear-gradient(45deg, #ff152184, #ff2ca481, #d230de7e, #9b17fa80) !important;
+  }
 }
 
 mat-card {

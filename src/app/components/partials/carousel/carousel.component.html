@@ -14,4 +14,13 @@
   </div>
   <button mat-mini-fab class="gradient-bgr" (click)="prev()"><mat-icon>chevron_left</mat-icon></button>
   <button mat-mini-fab class="gradient-bgr" (click)="next()"><mat-icon>chevron_right</mat-icon></button>
+
+  <div class="paginator">
+    @for (card of cards; track card; let i = $index) {
+    <span class="gradient-bgr-subtle"
+      [class.active]="i === activeIndex()"
+      (click)="goToCard(i)"
+    >{{i + 1}}</span>
+    }
+  </div>
 </div>

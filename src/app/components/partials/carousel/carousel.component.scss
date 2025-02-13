@@ -2,11 +2,13 @@
   position: relative;
   perspective: 50rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 60vw;
-  height: 60vh;
-  padding-bottom: 2.5rem;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 60dvw;
+  height: 80dvh;
+  padding-bottom: 1rem;
 
   .carousel {
     position: relative;
@@ -26,47 +28,91 @@
       font-size: 1.5rem;
       font-weight: bold;
       transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+      &.active {
+        transform: scale(1.2) translateX(0) translateZ(3.125rem);
+        z-index: 3;
+      }
+
+      &.next, &.prev {
+        transform: scale(0.9) translateX(9.5rem) translateZ(-1.25rem);
+        z-index: 2;
+        opacity: 0.8;
+      }
+
+      &.prev {
+        transform: scale(0.9) translateX(-9.5rem) translateZ(-1.25rem);
+      }
+
+      &.hidden {
+        transform: scale(0.7) translateX(20rem) translateZ(-2.5rem);
+        z-index: 1;
+        opacity: 0.5;
+      }
+    }
+
+    .paginator {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+
+      span {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #ccc;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.3s;
+
+        &.active {
+          background: #333;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  .paginator {
+    display: flex;
+    gap: 1rem;
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.8rem;
+      height: 1.8rem;
+      border-radius: 50%;
+
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+
+      &.active {
+        background: #333;
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  button {
+    &[mat-mini-fab]{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+
+      &:first-of-type {
+        left: -2.5rem;
+      }
+
+      &:last-of-type {
+        right: -2.5rem;
+      }
     }
   }
 }
 
 
-.active {
-  transform: scale(1.2) translateX(0) translateZ(50px);
-  z-index: 3;
-}
-
-.next, .prev {
-  transform: scale(0.9) translateX(150px) translateZ(-20px);
-  z-index: 2;
-  opacity: 0.8;
-}
-
-.prev {
-  transform: scale(0.9) translateX(-150px) translateZ(-20px);
-}
-
-.hidden {
-  transform: scale(0.7) translateX(300px) translateZ(-40px);
-  z-index: 1;
-  opacity: 0.5;
-}
-
-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: black;
-}
-
-button:first-of-type {
-  left: -40px;
-}
-
-button:last-of-type {
-  right: -40px;
-}
