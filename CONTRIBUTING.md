@@ -66,14 +66,6 @@ issue
 
 Every new issue is tagged with the "needs triage" label, signifying that it requires review and assessment by a core team member. This process ensures that issues are appropriately prioritized and assigned, fostering a collaborative environment where tasks are synchronized to prevent conflicts. While you focus on addressing an issue, it's important to recognize that others may be working on related tasks. Therefore, the "needs triage" label serves as a precautionary measure, indicating that the issue is not yet ready for immediate attention. The issue will be ready to work on, once the "needs triage" label is removed.
 
-# Standardization Across App Versions
-
-All app versions maintain consistent file structures, functionalities, and feature implementations deliberately. The variations between versions are minimal, primarily revolving around the utilization of UI components where a UI library is used.
-
-Once an issue has been resolved in one app version, the same implementation must be extended to all other versions, unless a superior alternative is proposed and accepted.
-
-Any new implementation suggestion must be discussed to verify it's suitable for adoption across all app versions.
-
 ## Before you start working on an Issue
 
 Before commencing work on any issue, it is essential to confirm that it has not already been addressed. Please check for existing implementations and if the chosen issue has already been resolved in a different app version, review the existing implementation and replicate it accordingly.
@@ -84,13 +76,13 @@ Even if the issue is labeled as not implemented, it remains your responsibility 
 
 Before you submit your Pull Request (PR) consider the following guidelines:
 
-1. Search [WithAngular](https://github.com/WithAngular) for an open or closed PR that relates to your submission.
+1. Search [withangular](https://github.com/WithAngular/withangular) for an open or closed PR that relates to your submission.
    You don't want to duplicate existing efforts.
 
 2. Be sure that an issue describes the problem you're fixing, or documents the design for the feature you'd like to add.
    Discussing the design upfront helps to ensure that we're ready to accept your work.
 
-3. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the `WithAngular` repo of your choice.
+3. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the `withangular` repo.
 
 4. In your forked repository, make your changes in a new git branch:
 
@@ -120,7 +112,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
    git push origin my-fix-branch
    ```
 
-10. In GitHub, send a pull request to `WithAngular/angular-primeng:main`.
+10. In GitHub, send a pull request to `withangular:main`.
 
 **DO NOT** erase the provided PR template! It is intended for you to use, not to replace it with random text.
 
@@ -128,7 +120,7 @@ It is always a good practice to look up already merged PRs and ensure your new P
 
 ## Reviewing a Pull Request
 
-I reserve the right not to accept pull requests from community members who haven't been good citizens of the community.
+We reserve the right not to accept pull requests from community members who haven't been good citizens of the community.
 
 #### After your pull request is merged
 
@@ -168,25 +160,31 @@ To ensure consistency throughout the source code and the different app versions,
 
 Store full components that can be used on their own, in the `components` folder, examples include:
 
-- `header`, `footer`, `posts`, `series`, `post-details`, `layout`, `sidenav`
+- `header`, `footer`, `posts`, `layout`, `dashboard`
+
+#### Dialogs
+
+Place popups/ modals/ dialogs, in the `dialogs` folder, examples:
+
+- `follow-dialog`, `search-dialog`
 
 #### Partial Components
 
 Place partial components like dialogs and other smaller reusable components, in the `partials` folder, examples:
 
-- `follow-dialog`, `search-dialog`
+- `social-icons`, `hero-banner`
 
 ### Interfaces
 
 Keep interfaces in the `models` folder, examples:
 
-- `blog-info.ts`, `post.ts`
+- `user.model.ts`, `user.ts`
 - Avoid duplicating existing interfaces.
 
 #### Services
 
 - Place services in the `services` folder, examples:
-  - `blog.service.ts`, `theme.service.ts`
+  - `data.service.ts`, `theme.service.ts`
 
 #### Pipes in the `pipes` folder
 
@@ -200,7 +198,7 @@ For clarification on component categorization or any other building block, cross
 
 ### NAMING CONVENTIONS
 
-- For dialogs, ensure the inclusion of the term dialog in the name.
+- For dialogs, ensure the inclusion of the term `dialog` in the name.
 - Maintain consistency with established naming conventions in other app versions.
 - Propose suggestions for improved and clearer naming in discussions or comments.
 

@@ -1,4 +1,40 @@
-# Withangular
+# WithAngular
+
+Website Repository
+
+[![WithAngular Logo](/public/images/branding/withangular_dev_cover-logo.jpg)](https://withangular.dev)
+
+This is the **official open-source repository** for [withangular.dev](https://withangular.dev) – the central platform of the WithAngular ecosystem.
+
+## About WithAngular.dev
+The website serves as a **showcase and gateway** to the different parts of WithAngular, including:
+- **[built.withangular.dev](https://built.withangular.dev)** – A curated showcase of verified Angular projects, focusing on open-source and indie developers.
+- **[build.withangular.dev](https://build.withangular.dev)** – A suite of powerful tools to **expedite your workflow** and make Angular development more efficient.
+- **[templates.withangular.dev](https://templates.withangular.dev)** – 100% **Angular-only** templates—unlike other providers that mislabel templates as Angular when they are not.
+- **[mentor.withangular.dev](https://mentor.withangular.dev)** – A platform to find **Angular mentors and experts** to guide you.
+- **[work.withangular.dev](https://work.withangular.dev)** – A dedicated **job board** for Angular-related opportunities.
+- **...and more to come!**
+
+
+## Tech Stack
+- **Angular** – Frontend framework
+- **Angular Material UI** – Modern and responsive UI components
+- **Netlify** – Hosting and deployment
+
+## Contributing
+We welcome **issues, feature requests, and PRs** to improve WithAngular.dev! Check out our **[Contributing Guide](CONTRIBUTING.md)** for details on how to get started.
+
+## License
+This project is **open-source** under the [MIT License](LICENSE).
+
+---
+
+### Connect with Us
+🌐 Website: [WithAngular.dev](https://withangular.dev) 
+
+💬 Discord: [Join the community](https://discord.gg/G2m2zeqm7n)
+__________________________________________________________
+
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.0.
 
