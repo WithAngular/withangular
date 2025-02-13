@@ -1,0 +1,31 @@
+[
+  {
+    "title": "Built with Angular",
+    "description": "A curated showcase of verified Angular projects, focusing on open-source and indie developers.",
+    "imageSrc": "/images/built-withangular-logo.png",
+    "link": "https://built.withangular.dev",
+    "linkText": "built.withangular.dev"
+  },
+  {
+    "title": "Build with Angular",
+    "description": "A suite of powerful tools to expedite your workflow and make Angular development more efficient.",
+    "imageSrc": "/images/build-withangular-logo.png",
+    "link": "https://build.withangular.dev",
+    "linkText": "build.withangular.dev"
+  },
+  {
+    "title": "Angular Templates",
+    "description": "100% Angular-only templates—unlike other providers that mislabel templates as Angular when they are not.",
+    "link": "https://templates.withangular.dev"
+  },
+  {
+    "title": "Angular Mentorship",
+    "description": "A platform to find Angular mentors and experts to guide you.",
+    "link": "https://mentor.withangular.dev"
+  },
+  {
+    "title": "Work with Angular",
+    "description": "A dedicated job board for Angular-related opportunities.",
+    "link": "https://work.withangular.dev"
+  }
+]

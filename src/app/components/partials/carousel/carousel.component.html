@@ -1,26 +1,32 @@
 <div class="carousel-container">
   <div class="carousel">
     @for (card of cards; track card; let i = $index) {
-    <mat-card
-      [class.active]="i === activeIndex()"
-      [class.next]="i === (activeIndex() + 1) % cards.length"
+    <mat-card [class.active]="i === activeIndex()" [class.next]="i === (activeIndex() + 1) % cards.length"
       [class.prev]="i === (activeIndex() - 1 + cards.length) % cards.length"
       [class.hidden]="i !== activeIndex() && i !== (activeIndex() + 1) % cards.length && i !== (activeIndex() - 1 + cards.length) % cards.length"
-      @carouselAnimation
-    >
-      {{ card }}
+      @carouselAnimation>
+      <h3>{{ card.title }}</h3>
+      <div class="image-wrapper">
+        @if (card.imageSrc) {
+        <img [src]="card.imageSrc" alt="{{ card.title }}" />
+        } @else {
+        <h3 class="gradient-text">COMING SOON</h3>
+        }
+      </div>
+      <p>{{ card.description }}</p>
+      @if (card.linkText) {
+      <a mat-raised-button class="gradient-bgr-subtle site-link" [href]="card.link"
+        target="_blank" rel="noopener">{{card.linkText}}<mat-icon>open_in_new</mat-icon></a>
+      }
     </mat-card>
-  }
+    }
   </div>
   <button mat-mini-fab class="gradient-bgr" (click)="prev()"><mat-icon>chevron_left</mat-icon></button>
   <button mat-mini-fab class="gradient-bgr" (click)="next()"><mat-icon>chevron_right</mat-icon></button>
 
   <div class="paginator">
     @for (card of cards; track card; let i = $index) {
-    <span class="gradient-bgr-subtle"
-      [class.active]="i === activeIndex()"
-      (click)="goToCard(i)"
-    >{{i + 1}}</span>
+    <span class="gradient-bgr-subtle" [class.active]="i === activeIndex()" (click)="goToCard(i)">{{i + 1}}</span>
     }
   </div>
 </div>

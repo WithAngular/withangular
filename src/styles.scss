@@ -31,6 +31,15 @@ mat-toolbar {
 a {
   text-decoration: none;
   color: #d8d8d8;
+
+  &.site-link {
+    direction: rtl;
+
+    mat-icon {
+      margin-right: 0 !important;
+      margin-left: 0.5rem !important;
+    }
+  }
 }
 
 .gradient-text {
