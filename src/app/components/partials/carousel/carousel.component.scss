@@ -1,0 +1,72 @@
+.carousel-container {
+  position: relative;
+  perspective: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
+  height: 60vh;
+  padding-bottom: 2.5rem;
+
+  .carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    mat-card {
+      position: absolute;
+      width: 22vw;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    }
+  }
+}
+
+
+.active {
+  transform: scale(1.2) translateX(0) translateZ(50px);
+  z-index: 3;
+}
+
+.next, .prev {
+  transform: scale(0.9) translateX(150px) translateZ(-20px);
+  z-index: 2;
+  opacity: 0.8;
+}
+
+.prev {
+  transform: scale(0.9) translateX(-150px) translateZ(-20px);
+}
+
+.hidden {
+  transform: scale(0.7) translateX(300px) translateZ(-40px);
+  z-index: 1;
+  opacity: 0.5;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: black;
+}
+
+button:first-of-type {
+  left: -40px;
+}
+
+button:last-of-type {
+  right: -40px;
+}

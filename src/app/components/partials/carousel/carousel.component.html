@@ -1,1 +1,17 @@
-<p>carousel works!</p>
+<div class="carousel-container">
+  <div class="carousel">
+    @for (card of cards; track card; let i = $index) {
+    <mat-card
+      [class.active]="i === activeIndex()"
+      [class.next]="i === (activeIndex() + 1) % cards.length"
+      [class.prev]="i === (activeIndex() - 1 + cards.length) % cards.length"
+      [class.hidden]="i !== activeIndex() && i !== (activeIndex() + 1) % cards.length && i !== (activeIndex() - 1 + cards.length) % cards.length"
+      @carouselAnimation
+    >
+      {{ card }}
+    </mat-card>
+  }
+  </div>
+  <button mat-mini-fab class="gradient-bgr" (click)="prev()"><mat-icon>chevron_left</mat-icon></button>
+  <button mat-mini-fab class="gradient-bgr" (click)="next()"><mat-icon>chevron_right</mat-icon></button>
+</div>
