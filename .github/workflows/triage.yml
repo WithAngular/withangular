@@ -1,0 +1,21 @@
+name: "Assign issues with .take"
+
+on:
+  issue_comment:
+    types:
+      - created
+      - edited
+
+jobs:
+  take-issue:
+    name: Disable take issue
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: take an issue
+        uses: bdougie/take-action@v1.6.1
+        with:
+          issueCurrentlyAssignedMessage: Thanks for being interested in this issue. It looks like this ticket is already assigned to a contributor.
+          token: ${{ secrets.ACCESS_TOKEN }}
+          blockingLabels: 👀 needs triage,blocked,core team work,📛 prerequisites missing,needs design,duplicate
+          blockingLabelsMessage: The issue you are trying to assign yourself is blocked either by the 'needs triage' label, or by another label on the issue. Please wait until the issue is unblocked before assigning yourself.
